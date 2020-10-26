@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.main {
+  height: 100%;
+}
+.row {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.list-group {
+  list-style: none;
+}
+
+.headingIndex {
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-right: 150px;
+}
+
+.titleIcon {
+  height: 17px;
+  width: 17px;
+}
+
+.textAlert {
+  padding : 0px;
+  color: red;
+  text-align:center
+}
+
+/* Top入力フォームのスタイル */
+.cp_iptxt {
+	position: relative;
+	width: 75%;
+}
+
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	padding-left: 40px;
+	letter-spacing: 1px;
+	border: 0;
+}
+
+.cp_iptxt input[type='text']:focus {
+	outline: none;
+}
+
+.cp_iptxt input[type='text']:focus::after {
+	outline: none;
+}
+
+.cp_iptxt i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 9px 5px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+
+.cp_iptxt::after {
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -1px;
+	content: '';
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #da3c41;
+}
+
+.flex-box {
+	display: flex;
+	justify-content: flex-end; 
+}

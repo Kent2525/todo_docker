@@ -1,0 +1,50 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # Specify the version you desire here
+      - image: circleci/php:7.1-node-browsers
+      - image: circleci/mysql:5.6
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # Using the RAM variation mitigates I/O contention
+      # for database intensive operations.
+      # - image: circleci/mysql:5.7-ram
+      #
+      # - image: redis:2.8.19
+
+    environment:
+      - APP_DEBUG: true
+      - APP_ENV: testing
+      - APP_KEY: base64:MVka/TFN0zq0FWljDSBUKLArCpX2SmTILOzYyxKNSVQ=
+      - DB_CONNECTION: circle_test
+      - MYSQL_ALLOW_EMPTY_PASSWORD: true
+
+    steps:
+      - checkout
+
+      # Install PHP Extension
+      - run: sudo docker-php-ext-install pdo_mysql
+
+      # Download and cache dependencies
+
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          
+      # run seeding
+      # - run: php artisan migrate
+      # - run: php artisan db:seed
+
+      # run tests!
+      # - run: php ./vendor/bin/phpunit
+          
+          
+
