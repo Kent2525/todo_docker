@@ -221,6 +221,7 @@ ul {
 
 .left-col {
   order: 2;
+  /* margin-right: 10px; */
 }
 
 .add-title-btn {
@@ -242,6 +243,7 @@ ul {
 
 .title-loop {
   display: flex;
+  margin-right: 15px;
 }
 
 .title-icon-section {
@@ -294,6 +296,10 @@ ul {
   .left-col {
     flex: 3;
     order: 1;
+  }
+
+  .title-loop {
+    margin-right: 0px;
   }
   
   .right-col {
