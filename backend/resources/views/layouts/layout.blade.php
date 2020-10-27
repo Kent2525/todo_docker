@@ -32,8 +32,10 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
   <link href="{{ asset('js/app.js') }}" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="/css/app.css"> -->
-  <!-- <link rel="stylesheet" href="/css/admin.css">  -->
+  <!-- <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/admin.css"> 
+  <link rel="stylesheet" href="/css/app.js">  -->
+  
 </head>
 <body class="bg-white">
   <header>
