@@ -299,7 +299,7 @@ ul {
   }
 
   .title-loop {
-    margin-right: 0px;
+    margin-right: 15px;
   }
   
   .right-col {
@@ -320,6 +320,10 @@ ul {
   .left-title-box {
     margin-left: 60px;
     margin-right: 60px;
+  }
+
+  .title-loop {
+    margin-right: 0;
   }
 } 
 
