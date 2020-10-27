@@ -9,7 +9,7 @@
       <a class="btn btn-primary" href="/easyLogin">簡易テストログイン</a>
     </div>
   @endif
-  <h2 class="top-title text-center text-info">おかえりTodoテスト</h2>
+  <h2 class="top-title text-center text-info">おかえりTodo</h2>
   <div class="text-center">
     <img src="{{ asset('image/topWelcome.jpg') }}" style="width: 85%;" alt="top image">
   </div>
