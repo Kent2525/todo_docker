@@ -9,11 +9,11 @@
       <a class="btn btn-primary" href="/easyLogin">簡易テストログイン</a>
     </div>
   @endif
-  <h2 class="top-title text-center text-info">おかえりTodo</h2>
+  <h2 class="top-title text-center text-info">おかえりTodoテスト</h2>
   <div class="text-center">
     <img src="{{ asset('image/topWelcome.jpg') }}" style="width: 85%;" alt="top image">
   </div>
-  <h3 class="suggest-msg text-center">帰国時の予定を建てましょう</h3>
+  <h3 class="suggest-msg text-center">帰国時の予定を建てましょう。</h3>
   <div class="main-tag-group">
     <button class="btn main-tag btn-primary btn-lg" onclick="clickTag1()">#家族と会う</button>
     <button class="btn main-tag btn-primary btn-lg" onclick="clickTag2()">#買い物に行く</button>
