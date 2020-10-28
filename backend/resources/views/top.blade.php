@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title','Todo一覧')
+@section('title','おかえりTodo')
 
 @section('content')
 <div class="container">
