@@ -43,7 +43,9 @@
 
           @endforeach
         </ul>
-      <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
+      <div class="addbtn-heading">
+        <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary text-white">追加</a>
+      </div>
     </div>
   </div>
 
