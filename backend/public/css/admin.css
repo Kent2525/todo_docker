@@ -286,6 +286,10 @@ ul {
   padding-left: 25px;
 }
 
+.addbtn-xs-right {
+  text-align: right;
+}
+
 /* mypageタブレット画面以上 */
 @media screen and (min-width: 576px) {
   .main {
@@ -311,6 +315,10 @@ ul {
   
   .heading-index {
     margin-right: 50px;
+  }
+
+  .addbtn-xs-right {
+    text-align: right;
   }
 }
 
