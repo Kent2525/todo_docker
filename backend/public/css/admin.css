@@ -221,6 +221,7 @@ ul {
 }
 
 .left-col {
+  border-top: 2px solid gray;
   order: 2;
 }
 
@@ -299,6 +300,7 @@ ul {
   }
   
   .left-col {
+    border-top: none;
     flex: 3;
     order: 1;
   }
