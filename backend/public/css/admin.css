@@ -23,6 +23,7 @@ ul {
 
 .fixed-navbar-mobile {
   position: fixed !important;
+  z-index: 2000;
 }
 
 .top-todo-title {
