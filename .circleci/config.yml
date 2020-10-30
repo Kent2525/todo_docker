@@ -5,7 +5,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/circleci_test
+    working_directory: ~/../
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.1-node-browsers
