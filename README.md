@@ -3,24 +3,36 @@
 
 ## Introduction
 
-Build a simple laravel development environment with docker-compose.
+このアプリは海外在住者向けの一時帰国した際の予定を立てるTodoです。
+これは私が実際に海外在住時に毎回帰国の予定を立てて記録するのが大変だったので
+このような便利なアプリがあればいいという想いで作りました。
+
+TOP画面からは同じような一時帰国者がよく行う予定をデフォルトタグとしてクリックしたら
+即座に自分のリストに組み込む事ができます。
+もちろん自分のオリジナルの予定も入力して入れる事ができます。
+但し登録をしていないユーザはmypageでリストを管理する事はできません。
+
+mypageではユーザーの登録したTodoが表示されます。
+内容はシンプルで操作が容易なCRUD機能が備わっております。
+それぞれのタイトルの中に見出しがあり、見出しの中にさらにメモを保存できる機能があります。
+
+レスポンシブに関しても、CSSをモバイルファーストの記述構造になっており
+PC、タブレット、モバイル画面それぞれで自然に表示できるようにこだわりました。
+
+開発環境はDocker, AWS, CircleCIを使用しており
+できるだけ開発現場で使われている技術を積極的に使って、
 
 ## Usage
 
-```bash
-$ git clone git@github.com:ucan-lab/docker-laravel.git
-$ cd docker-laravel
-$ make create-project # Install the latest Laravel project
-$ make install-recommend-packages # Not required
-```
+Auth認証機能、基本CRUD機能、モーダル、onckickイベント、レスポンシブ対応
 
 http://127.0.0.1
 
 Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/master/Makefile).
 
-## Tips
+## 使用している技術
 
-Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
+HTML&CSS, PHP, Javescript, jQuery, MySQL, bootstrap, AWSデプロイ, Docker, CircleCI,
 
 ## Container structure
 
