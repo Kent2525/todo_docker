@@ -35,10 +35,10 @@ jobs:
 
       # - run: composer install -n --prefer-dist
 
-      # - save_cache:
-      #     key: v1-dependencies-{{ checksum "composer.json" }}
-      #     paths:
-      #       - ./vendor
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./backend/vendor
       # - restore_cache:
       #     keys:
       #       - node-v1-{{ checksum "package.json" }}
@@ -54,6 +54,6 @@ jobs:
       # - run: php artisan migrate --env=testing --database=sqlite_testing --force
 
       # run tests with phpunit or codecept
-      - run: todoapp/server/todo_docker/backend/vendor/bin/phpunit
+      # - run: todoapp/server/todo_docker/backend/vendor/bin/phpunit
       # - run: ./backend/vendor/bin/codecept build
       # - run: ./backend/vendor/bin/codecept run
