@@ -37,7 +37,7 @@
         @if (count($errors) > 0)
             <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
         @endif
-        {{-- レスポンシブ用に2つ用意 --}}  
+        <!-- {{-- レスポンシブ用に2つ用意 --}}   -->
         @if(Auth::check())
           <div class="d-none d-sm-block">
             <div class="text-right">
@@ -63,7 +63,7 @@
       </div>  
     </form>   
   </div>
-  {{-- サイトの下部のクリックタグ --}}
+  <!-- {{-- サイトの下部のクリックタグ --}} -->
   @include('components.ClickTag')
 
 </div>

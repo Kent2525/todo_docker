@@ -51,6 +51,7 @@
   </div>
 </div>
 <script>
+// TodoのチェックボックスのjQuery
 $(":checkbox").click(function() {
 if ($(this).is(":checked"))
 {
