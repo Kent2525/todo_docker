@@ -30,7 +30,7 @@
   <!-- {{-- 右側の見出しエリア --}} -->
   <div class="right-col bg-white">
     <div class="right-content-box my-4">
-        <h5>Todoタイトルを選択してください。</h5>
+        <h5>Todoタイトルを選択してください</h5>
     </div>
   </div>
 </div>
