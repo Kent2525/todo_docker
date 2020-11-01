@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="main">
-  <!-- {{-- 左側のタイトルエリアテスト --}} -->
+  <!-- {{-- 左側のタイトルエリア --}} -->
   <div class="left-col">
     <div class="left-title-box my-4">
       <div class=text-center>
