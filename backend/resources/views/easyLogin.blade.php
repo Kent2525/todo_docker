@@ -27,14 +27,14 @@
                                 <div class="form-group">
                                     <label for="email" class="">{{ __('messages.E-Mail Address') }}</label>
                                     <div class="">
-                                        <input id="email" type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="test@gmail.com" required autocomplete="email" autofocus/>
+                                        <input id="email" type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="sample.test@gmail.com" required autocomplete="email" autofocus/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="password" class="">{{ __('messages.Password') }}</label>
                                     <div class="">
-                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="testtest" required autocomplete="current-password"/>
+                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="testokaeritodo" required autocomplete="current-password"/>
                                     </div>
                                 </div>
                                 <div class="custom-control custom-checkbox">
