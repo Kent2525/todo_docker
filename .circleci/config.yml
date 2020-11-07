@@ -20,6 +20,13 @@ jobs:
       #
       # - image: redis:2.8.19
 
+    environment:
+      - APP_DEBUG: true
+      - APP_ENV: testing
+      - APP_KEY: base64:jjAqtfNYNYZ26LImShCeISlkrdk055QVMkGT1UI7GxI=
+      - DB_CONNECTION: circle_test
+      - MYSQL_ALLOW_EMPTY_PASSWORD: true
+
     steps:
       - checkout
 
