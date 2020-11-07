@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+    parallelism: 3
     machine: true
     # working_directory: 
     docker:
@@ -27,14 +28,13 @@ jobs:
     #   - APP_KEY: base64:jjAqtfNYNYZ26LImShCeISlkrdk055QVMkGT1UI7GxI=
     #   - DB_CONNECTION: circle_test
     #   - MYSQL_ALLOW_EMPTY_PASSWORD: true
-
+    working_directory: ~/todo_docker
     steps:
       - checkout
 
       - run: echo "Hello World"
-      - run:
-        name: Setup docker
-        command: docker-compose build
+      - run: composer install
+
       # - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       # - run: sudo docker-php-ext-install zip
 
