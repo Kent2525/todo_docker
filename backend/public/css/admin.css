@@ -224,6 +224,7 @@ ul {
   flex-direction: column;
 }
 
+/* モバイル画面時は下に配置 */
 .left-col {
   border-top: 2px solid gray;
   order: 2;
