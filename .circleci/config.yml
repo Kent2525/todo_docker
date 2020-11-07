@@ -34,9 +34,7 @@ jobs:
       - run: echo "Hello World"
       - run:
         name: Setup docker
-        command: |
-          docker-compose build
-          docker-compose up -d
+        command: docker-compose build
       # - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       # - run: sudo docker-php-ext-install zip
 
