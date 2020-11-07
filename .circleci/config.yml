@@ -5,7 +5,7 @@
 version: 2
 jobs:
   build:
-    # parallelism: 3
+    parallelism: 3
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.1-node-browsers
@@ -31,7 +31,7 @@ jobs:
       - checkout
 
       - run: echo "Hello World"
-      # - run: composer install
+      - run: composer install
 
       # - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       # - run: sudo docker-php-ext-install zip
