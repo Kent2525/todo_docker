@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* テスト */
 /* ↓共通のCSS↓ */
 
 html {
@@ -136,6 +135,7 @@ ul {
   text-align:right;
 }
 
+/* 未ログインの際のログインリンク。モバイルの場合、中央に配置 */
 .recommend-login {
   text-align: center;
   margin-bottom: 10px;
