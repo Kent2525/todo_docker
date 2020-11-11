@@ -19,10 +19,6 @@ jobs:
       # - image: circleci/mysql:5.7-ram
       #
       # - image: redis:2.8.19
-
-    environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
-      - MYSQL_DATABASE=circle_test
       
     # working_directory: ~/todo_docker
     steps:
