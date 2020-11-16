@@ -3,6 +3,7 @@ function clickTag1() {
   clickHidden1();
 }
 
+// スパンタグをformAreaに表示する
 function clickSpan1() {
   var span = document.createElement("span");
   span.innerText = "#家族と会う"
@@ -10,6 +11,7 @@ function clickSpan1() {
   formArea.appendChild(span);
 }
 
+// inputのタグを作ってから各属性をつけていく（hidden）
 function clickHidden1() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
