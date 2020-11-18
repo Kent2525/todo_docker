@@ -20,7 +20,7 @@ jobs:
       #
       # - image: redis:2.8.19
       
-    working_directory: ~/todoapp/server/todo_docker
+    working_directory: ~/todo_docker
     steps:
       - checkout
 
