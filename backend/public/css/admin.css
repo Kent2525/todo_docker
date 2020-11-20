@@ -307,6 +307,7 @@ ul {
     flex-direction: row;
   }
   
+  /* タイトルが左にくる */
   .left-col {
     border-top: none;
     flex: 3;
