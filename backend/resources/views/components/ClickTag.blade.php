@@ -2,7 +2,7 @@
     <div class="meet-container">
       <h4 class="subject-item">約束・人と会う</h4>
       <div class="tag-line">  
-        <button class="btn btn-tag btn-primary btn-lg m-2" onclick="clickTag1()" >#家族と会う</button>
+        <button class="btn btn-tag btn-primary btn-lg m-2" onclick="clickTag1()">#家族と会う</button>
         <button class="btn btn-tag btn-primary btn-lg m-2" onclick="clickTag5()">#友達と会う</button>
         <button class="btn btn-tag btn-primary btn-lg m-2" onclick="clickTag6()">#恋人に会う</button>
         <button class="btn btn-tag btn-primary btn-lg m-2" onclick="clickTag7()">#親戚に会う</button>

@@ -20,6 +20,8 @@ function clickHidden1() {
   test.setAttribute("value", "家族と会う");
   var formArea = document.getElementById("formArea");
   formArea.appendChild(test);
+  // var fami = document.getElementById("fami");
+  // fami.setAttribute("disabled");
 }
 
 function clickTag2() {

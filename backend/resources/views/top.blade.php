@@ -15,7 +15,7 @@
   </div>
   <h3 class="suggest-msg text-center">帰国時の予定を建てましょう</h3>
   <div class="main-tag-group">
-    <button class="btn main-tag btn-primary btn-lg" onclick="clickTag1()">#家族と会う</button>
+    <button class="btn main-tag btn-primary btn-lg" onclick="clickTag1()" id="fami">#家族と会う</button>
     <button class="btn main-tag btn-primary btn-lg" onclick="clickTag2()">#買い物に行く</button>
     <button class="btn main-tag btn-primary btn-lg" onclick="clickTag3()">#お土産を買う</button>
     <button class="btn main-tag btn-primary btn-lg" onclick="clickTag4()">#日本食を食べる</button>
