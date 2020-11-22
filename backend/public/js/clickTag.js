@@ -9,7 +9,7 @@ function clickSpan1() {
   span.innerText = "#家族と会う"
   var formArea = document.getElementById("formArea");
   formArea.appendChild(span);
-  // span.removeEventListener('click', formArea);
+  span.removeEventListener('click');
   // formArea.disabled = true;
 }
 
