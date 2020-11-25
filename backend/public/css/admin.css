@@ -278,6 +278,7 @@ ul {
   text-align: center;
 }
 
+/* タイトル追加のプラスマーク */
 .plusAwesome{
   color: gray !important;
 }
