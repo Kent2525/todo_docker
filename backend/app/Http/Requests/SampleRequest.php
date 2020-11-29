@@ -24,7 +24,7 @@ class SampleRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
         ];
     }
 }
