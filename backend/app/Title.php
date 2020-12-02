@@ -10,7 +10,6 @@ class Title extends Model
 
     public static $rules = array(
         'title' => 'required',
-        'title1' => 'required',
     );
 
     public function contents()
