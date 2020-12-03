@@ -320,6 +320,7 @@ ul {
     margin-right: 15px;
   }
   
+  /* 見出しが右にくる */
   .right-col {
     flex: 5;
     order: 2;

@@ -28,8 +28,6 @@ class TopController extends Controller
         //     return redirect('/#formArea');
         // }
         $this ->validate($request, ['heading' =>'required']);
-
-        
         $title = new Title;     
         $title->user_id = Auth::id();
         $title->save();
