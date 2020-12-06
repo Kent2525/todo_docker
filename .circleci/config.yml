@@ -25,6 +25,7 @@ jobs:
       - checkout
 
       - run: echo "Hello World"
+      - run: echo "test2"
 
       - run:
           name: Unittest
