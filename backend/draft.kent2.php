@@ -22,3 +22,26 @@ class Man
 $seito = new Man();
 $seito->show();
 <!-- showの結果、鈴木が出力される。 -->
+
+■ publicとprivate
+
+class Menu {
+  public $name
+  public function __construct($name) {
+    $this->name = $name;
+  }
+}
+$curry = new Menu('CURRY');
+echo $curry->name;
+<!-- public なので'CURRY'を出力する事ができる。 -->
+
+class Menu {
+  private $name
+  public function __construct($name) {
+    $this->name = $name;
+  }
+}
+$curry = new Menu('CURRY');
+echo $curry->name;
+<!-- privateでアクセスできないのでエラーが発生。 -->
+
