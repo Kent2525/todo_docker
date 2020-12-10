@@ -80,3 +80,9 @@ echo $curry->name;
 <!-- 例 -->
  require_once('data.php');
  
+■ formについて
+<form action="ファイル名" method="post">
+</form>
+
+■ submitについて
+<input type="submit" value="送信する">
