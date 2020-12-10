@@ -86,3 +86,9 @@ echo $curry->name;
 
 ■ submitについて
 <input type="submit" value="送信する">
+
+■ 継承extends
+controllerに表記がある
+class 子クラス名 extends 親クラス（継承名）
+<!-- 例 -->
+class TodoController extends Controller
