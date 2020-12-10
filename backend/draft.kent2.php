@@ -45,3 +45,8 @@ $curry = new Menu('CURRY');
 echo $curry->name;
 <!-- privateでアクセスできないのでエラーが発生。 -->
 
+■ require_once
+ require_once('ファイル名');で他フォルダーのファイルを読み込む。Laravelのuseに似ている。
+<!-- 例 -->
+ require_once('data.php');
+ 
