@@ -23,6 +23,36 @@ $seito = new Man();
 $seito->show();
 <!-- showの結果、鈴木が出力される。 -->
 
+■ construct応用
+【menu.php】
+public function __construct($name, $price, $image) {
+    $this->name = $name;
+    $this->price = $price;
+    $this->image = $image;
+  }
+
+<!-- これで$menu->getName, $menu->getImage, $menu->getTaxInclubdeが使えるようになる。 -->
+  public function getName() {
+    return $this->name;
+  }
+  
+  public function getImage() {
+    return $this->image;
+  }
+
+  public function getTaxIncludedPrice() {
+    return floor($this->price * 1.08);
+  }
+
+【data.php】
+require_once('menu.php')
+<!-- __constructの($name, $price, $image)の並びになっている -->
+$juice = new Menu('JUICE', 600, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/juice.png');
+$coffee = new Menu('COFFEE', 500, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png');
+$curry = new Menu('CURRY', 900, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/curry.png');
+$pasta = new Menu('PASTA', 1200, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png');
+
+
 ■ publicとprivate
 
 class Menu {
