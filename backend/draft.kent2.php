@@ -92,3 +92,14 @@ controllerに表記がある
 class 子クラス名 extends 親クラス（継承名）
 <!-- 例 -->
 class TodoController extends Controller
+
+■ セッター（setter)
+
+class Menu{
+  private $orderCount;
+
+  <!-- privateの場合、クラスの外から値を変更できなくなる。下記は値を変更できるメソッド。set○○○と設定するのが一般的 -->
+  public function setOrderCount($orderCount) {
+    $this->orderCount = $orderCount;
+  }
+}
