@@ -103,3 +103,15 @@ class Menu{
     $this->orderCount = $orderCount;
   }
 }
+
+■ staticついて
+staticは、簡単に言うと、クラスのインスタンスを生成することなしに、つまり、newせずに利用できるプロパティやメソッドのことです。
+個別に値をずっと持たせておく必要のないとき(newしなくてよいとき)
+【menu.php】
+class Menu {
+  public static $count = 4; <!-- ←4の数字を固定したい時に使う -->
+}
+  
+【index.php】
+require_once('menu.php');
+<h3>メニュー<?php echo Menu::$count ?></h3> <!-- ←クラス名の後に::をつける -->
