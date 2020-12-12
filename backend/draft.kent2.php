@@ -107,6 +107,7 @@ class Menu{
 ■ staticついて
 staticは、簡単に言うと、クラスのインスタンスを生成することなしに、つまり、newせずに利用できるプロパティやメソッドのことです。
 個別に値をずっと持たせておく必要のないとき(newしなくてよいとき)
+クラスプロパティを使用する際に使う。クラスプロパティとはクラス内のプロパティの事。
 【menu.php】
 class Menu {
   public static $count = 4; <!-- ←4の数字を固定したい時に使う -->
@@ -114,4 +115,28 @@ class Menu {
   
 【index.php】
 require_once('menu.php');
-<h3>メニュー<?php echo Menu::$count ?></h3> <!-- ←クラス名の後に::をつける -->
+<h3>メニュー<?php echo Menu::$count ?></h3> <!-- ←echo の際は、クラス名の後に::をつける -->
+
+■ self
+例えばインスタンスの数が増減する度に、インスタンスの数を表示したい。
+selfを使ってクラスプロパティに直接アクセスする。
+
+【menu.php】
+class Menu {
+  public static $count = 0;
+  public function __construct(...) {
+    ...
+    self::$count++;
+    <!-- ↑selfとはMenuクラスのこと -->
+  }
+}
+
+staticなのでゲッターを設定する必要がある。
+public static function getCount() {
+  return self::$count;
+}
+
+【index.php】
+<p><?php echo Menu::getCount() ?> 個</p>
+<!-- 出力はインスタンスの数 個が出る。 -->
+
