@@ -1,5 +1,7 @@
 PHP復習
 
+■
+
 ■ foreach
 <?php foreach ($menus as $menu): ?>
   <h3><?php echo $menu->name ?></h3>
@@ -51,7 +53,7 @@ $juice = new Menu('JUICE', 600, 'https://s3-ap-northeast-1.amazonaws.com/progate
 $coffee = new Menu('COFFEE', 500, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png');
 $curry = new Menu('CURRY', 900, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/curry.png');
 $pasta = new Menu('PASTA', 1200, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png');
-
+<!-- 上記のような $変数名 = newクラス名('引数, ...')のようなコードはインスタンス化と呼ぶ -->
 
 ■ publicとprivate
 
@@ -75,11 +77,15 @@ $curry = new Menu('CURRY');
 echo $curry->name;
 <!-- privateでアクセスできないのでエラーが発生。 -->
 
-■ require_once
- require_once('ファイル名');で他フォルダーのファイルを読み込む。Laravelのuseに似ている。
+■ require
+ require('ファイル名');で他フォルダーのファイルを読み込む。Laravelのuseに似ている。
 <!-- 例 -->
- require_once('data.php');
- 
+ require('data.php');
+ その他に
+ require_once('data.php'); <!-- 既にファイルが読み込まれていたらスキップしてくれる -->
+ include('data.php'); <!-- requireは読み込めなかったら、エラーになるがincludeはならない。 -->
+ include_once('data.php'); <!-- 処理をそのまま実行しつつ、既にファイルが読み込まれていたらスキップする -->
+
 ■ formについて
 <form action="ファイル名" method="post">
 </form>
