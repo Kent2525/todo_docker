@@ -163,4 +163,13 @@ class Main {
 
 public const VERSION = 0.1; // 定数は慣習的に大文字にする。public をprivateに変えても大丈夫。
 
+■ ゲッターとセッターについて
+ゲッターは読み込み専用、セッターは書き込み専用。
+public function getType() {
+  return $this->type;
+}
+
+public function setType() {
+  $this->type = $type;
+}
 
