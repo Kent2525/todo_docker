@@ -24,6 +24,9 @@ class Man
 $seito = new Man();
 $seito->show();
 <!-- showの結果、鈴木が出力される。 -->
+<!-- コンストラクタの正体：$変数 = new クラス名をした次点で強制的にコンストラクタが読み込まれる。 -->
+<!-- コンストクタはインスタンスを作った時点で最低限必要とされる処理をそこに記載する事が多い。 -->
+<!-- https://www.youtube.com/watch?v=YZS_RAYYeXQ -->
 
 ■ construct応用
 【menu.php】
