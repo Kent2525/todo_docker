@@ -149,3 +149,18 @@ public static function getCount() {
 <p><?php echo Menu::getCount() ?> 個</p>
 <!-- 出力はインスタンスの数 個が出る。 -->
 
+■ classで型を指定する
+<?php 
+// (strict_type=1);を付けないともし違った型がきた場合、エラーが出ない。
+declare(strict_type=1);
+
+class Main {
+  private string $text;  // stringにする事によって、文字列しか受け付けなくなる
+}
+
+■ 定数（オブジェクト定数）
+クラスに紐づいた定数を設定する事ができる。
+
+public const VERSION = 0.1; // 定数は慣習的に大文字にする。public をprivateに変えても大丈夫。
+
+
