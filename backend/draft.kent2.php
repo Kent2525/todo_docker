@@ -173,3 +173,9 @@ public function setType() {
   $this->type = $type;
 }
 
+■ クエリ(query)
+クエリとはDBに対して問い合わせ（命令・処理要求）を行うこと または検索エンジンに入力する検索ワードのこと。
+今回はURLの末尾に情報を載せるように使っていく。
+【index.php】
+// このリンクをクリックした先のURLの末尾がgetNameで取得した情報が表示される。
+<a href="show.php?name=<?php echo $curry->getName() ?>">
