@@ -124,7 +124,7 @@ class Menu {
   
 【index.php】
 require_once('menu.php');
-<h3>メニュー<?php echo Menu::$count ?></h3> <!-- ←echo の際は、クラス名の後に::をつける -->
+<h3>メニュー<?php echo Menu::$count ?></h3> <!-- クラスプロパティにアクセスする場合はクラス名の後に::をつける -->
 
 ■ self
 例えばインスタンスの数が増減する度に、インスタンスの数を表示したい。
@@ -178,4 +178,26 @@ public function setType() {
 今回はURLの末尾に情報を載せるように使っていく。
 【index.php】
 // このリンクをクリックした先のURLの末尾がgetNameで取得した情報が表示される。
-<a href="show.php?name=<?php echo $curry->getName() ?>">
+<a href="show.php?name=<?php echo $menu->getName() ?>">
+
+【show.php】
+// $_GETを使用する事でクエリ情報を受け取る事ができる。
+$menuName = $_GET['name'];
+<p><?php echo $menuName ?>の詳細ページです</p>
+
+■ findByNameメソッド（特定のインスタンスの取得）
+クリックして別のページに遷移した時に、その先の情報を取得して表示しなくてはならない。
+$_GETを使用したことによって名前はわかっているので、その名前からインスタンスを取得する
+【show.php】
+$menus = array('juice', 'coffee', 'curry', 'pasta');
+// これで$menuをshow.phpで使った時にfindByNameのロジックが発動する。
+$menu = Menu::findByName($menus, $menuName);
+
+【Menu.php】
+public static function findByName($menus, $name) {
+  foreach ($menus as $menu) {
+    if ($menu->getName() == $name) {
+      return $menu;
+    }
+  }
+}
