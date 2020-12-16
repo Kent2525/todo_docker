@@ -1,6 +1,7 @@
 PHP復習
 
-■
+■ プロパティ
+クラス内で指定した変数が使用できるように宣言すること。
 
 ■ foreach
 <?php foreach ($menus as $menu): ?>
@@ -30,6 +31,7 @@ $seito->show();
 
 ■ construct応用
 【menu.php】
+<!-- construct()内の変数はnewで受け取った値 -->
 public function __construct($name, $price, $image) {
     $this->name = $name;
     $this->price = $price;
