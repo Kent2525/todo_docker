@@ -60,7 +60,7 @@ $curry = new Menu('CURRY', 900, 'https://s3-ap-northeast-1.amazonaws.com/progate
 $pasta = new Menu('PASTA', 1200, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png');
 <!-- 上記のような $変数名 = newクラス名('引数, ...')のようなコードはインスタンス化と呼ぶ -->
 
-■ publicとprivate
+■ publicとprivate（アクセス修飾子）
 
 class Menu {
   public $name
@@ -91,12 +91,59 @@ echo $curry->name;
  include('data.php'); <!-- requireは読み込めなかったら、エラーになるがincludeはならない。 -->
  include_once('data.php'); <!-- 処理をそのまま実行しつつ、既にファイルが読み込まれていたらスキップする -->
 
-■ formについて
-<form action="ファイル名" method="post">
+■ゲッターとセッター（getter and setter）
+ゲッターはプロパティがprivateの時に使用する。viewなどでプロパティ（変数）を表示したい時などに使用。
+一方、セッターはユーザーがformなどで情報を送信してきた時に行う処理。
+【index.php】
+<!DOCTYPE html>
+<p>この名前は<?php echo $menu->getName() ?>です。</p>
+<form action="ファイル名" method="post" name="order">
+  ........
+  <input type="submit" value="送信する">
 </form>
+
+【menu.php】
+class Menu {
+  private $name;
+  private $price;
+
+  public function __construct($name, $price) {
+    $this->name = $name;
+    $this->price = $price;
+  }
+
+  <!-- $nameに代入された値をindex.phpなどのviewで使えるようにしている -->
+  public function getName() {
+    return $this->name;
+  }
+
+  <!-- $orderCountにformで送られてきた情報が入った状態で使えるようにしている -->
+  pucblic function setOrderCount($orderCount) {
+    $this->orderCount = $orderCount;
+  }
+}
+
+【confirm.php】
+<!-- $orderCountにユーザーが送ってformの情報を代入している。 -->
+<!-- $_POSTはformから送られてきた情報を受け取る役割を持っている -->
+<?php $orderCount = $_POST[$menu->getName()]?>
+
+
+■ ゲッターとセッターについて part.2
+
+ゲッターは読み込み専用、セッターは書き込み専用。
+public function getType() {
+  return $this->type;
+}
+
+public function setType() {
+  $this->type = $type;
+}
 
 ■ submitについて
 <input type="submit" value="送信する">
+
+
 
 ■ 継承extends
 controllerに表記がある
@@ -104,19 +151,9 @@ class 子クラス名 extends 親クラス（継承名）
 <!-- 例 -->
 class TodoController extends Controller
 
-■ セッター（setter)
-
-class Menu{
-  private $orderCount;
-
-  <!-- privateの場合、クラスの外から値を変更できなくなる。下記は値を変更できるメソッド。set○○○と設定するのが一般的 -->
-  public function setOrderCount($orderCount) {
-    $this->orderCount = $orderCount;
-  }
-}
 
 ■ staticついて
-staticは、簡単に言うと、クラスのインスタンスを生成することなしに、つまり、newせずに利用できるプロパティやメソッドのことです。
+staticは、簡単に言うと、クラスのインスタンスを生成することなしに、つまり、newせずに利用できるプロパティやメソッドのこと。
 個別に値をずっと持たせておく必要のないとき(newしなくてよいとき)
 クラスプロパティを使用する際に使う。クラスプロパティとはクラス内のプロパティの事。
 【menu.php】
@@ -164,16 +201,6 @@ class Main {
 クラスに紐づいた定数を設定する事ができる。
 
 public const VERSION = 0.1; // 定数は慣習的に大文字にする。public をprivateに変えても大丈夫。
-
-■ ゲッターとセッターについて
-ゲッターは読み込み専用、セッターは書き込み専用。
-public function getType() {
-  return $this->type;
-}
-
-public function setType() {
-  $this->type = $type;
-}
 
 ■ クエリ(query)
 クエリとはDBに対して問い合わせ（命令・処理要求）を行うこと または検索エンジンに入力する検索ワードのこと。
