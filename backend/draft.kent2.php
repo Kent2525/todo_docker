@@ -230,3 +230,5 @@ public static function findByName($menus, $name) {
     }
   }
 }
+
+■ instanceof
