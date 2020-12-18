@@ -231,4 +231,5 @@ public static function findByName($menus, $name) {
   }
 }
 
-■ instanceof
+■ instanceof(継承)
+
