@@ -245,3 +245,4 @@ public static function findByName($menus, $name) {
 
 ■ instanceof(継承)
 
+■   PHP POD
