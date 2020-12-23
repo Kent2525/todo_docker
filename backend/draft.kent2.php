@@ -245,4 +245,8 @@ public static function findByName($menus, $name) {
 
 ■ instanceof(継承)
 
-■   PHP POD
+■ SQLステートメント
+ステートメント = 書き方
+下記のような書き方をSQLステートメントという。
+INSERT INTO [Table]([Column]) VALUES [値1、値2、値3,...];
+DELETE FROM [Table];
