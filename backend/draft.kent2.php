@@ -250,3 +250,11 @@ public static function findByName($menus, $name) {
 下記のような書き方をSQLステートメントという。
 INSERT INTO [Table]([Column]) VALUES [値1、値2、値3,...];
 DELETE FROM [Table];
+
+■ doc
+docとエディターに打ち込むだけでHTMLの基本コードを出す事ができる。
+
+■ == と ===
+
+== : 型の相互変換をした後で $a が $b に等しい時に TRUE
+=== : $a が $b に等しく、および同じ型である場合に TRUE
