@@ -266,5 +266,7 @@ var_dumpの前に<pre>を入れる事でブラウザで見やすく表示する�
     var_dump($todo);
     exit;
 
+■  __FUNCTION__
+echo __FUNCTION__; とする事でファンクション名を試しに出力する事ができる。
 
 
