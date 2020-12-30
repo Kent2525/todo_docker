@@ -269,4 +269,8 @@ var_dumpの前に<pre>を入れる事でブラウザで見やすく表示する�
 ■  __FUNCTION__
 echo __FUNCTION__; とする事でファンクション名を試しに出力する事ができる。
 
+■  リダイレクト処理 header Location
+メソッドの最後に header("Location: ./index.php"); のように書く事によって
+指定した先にリダイレクトできる。
+
 
