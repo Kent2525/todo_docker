@@ -273,4 +273,13 @@ echo __FUNCTION__; とする事でファンクション名を試しに出力す�
 メソッドの最後に header("Location: ./index.php"); のように書く事によって
 指定した先にリダイレクトできる。
 
+■  $_SERVER['REQUEST_METHOD']
+ページがリクエストされた時のリクエストメソッド名を返す。
+（例）
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+...
+}
+ 
+
+
 
