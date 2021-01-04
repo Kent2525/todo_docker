@@ -280,5 +280,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 ...
 }
  
-■ sprintf
+■  sprintf
+
+
+■  isset関数
+引数に指定した変数が存在していればTRUE、存在しなかったりNULLの場合はFALSEを返す。if文とセットで使われる事が多い。empty関数と似ているが返り値が逆になる点が注意。
+（例）
+$var = 10;
+
+print(isset($var));         // TRUE
+print(isset($var2));        // FALSE
+print(isset($var, $var2));  // FALSE
+
 
