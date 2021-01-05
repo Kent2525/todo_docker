@@ -280,8 +280,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 ...
 }
  
-■  sprintf
+■  printfとsprintf
+この2つはフォーマット文字列（指定した文字列）を使う時に使用。
+指定方法は%sは文字列(数字でもOK)、%dは整数、%fは浮動小数点
+printfはechoと似ていて、単純に出力したい時に使う。
+sprinfはフォーマット文字列を代入する時に使う。
+（例）
+$month = 2;
+$day = 5;
+printf("誕生日は%d月%d日です", $month, $day); //出力結果:"誕生日は2月5日です"
 
+$title = testTitle;
+$detail = testDetail;
+$params = sprintf("Todo_id=%s&title=%s&detail=%s", 1, $title, $detail); 
+echo $params; //出力結果:"todo_id=1&title=testTitle&detail=testDetail"
 
 ■  isset関数
 引数に指定した変数が存在していればTRUE、存在しなかったりNULLの場合はFALSEを返す。if文とセットで使われる事が多い。empty関数と似ているが返り値が逆になる点が注意。
@@ -291,5 +303,19 @@ $var = 10;
 print(isset($var));         // TRUE
 print(isset($var2));        // FALSE
 print(isset($var, $var2));  // FALSE
+
+■  スーパーグローバル変数
+PHPで定義済み変数の事。どの場所でも使用する事ができる変数。
+下記の9種類が存在する。
+$GLOBALS、$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST、$_ENV
+
+■  $_SERVER
+セッションとは、コンピュータのサーバー側に一時的にデータを保存する仕組みのこと。
+cookieと似ているがcookieはブラウザ側、セッションはサーバー側にデータを保存する場所が違う。
+実践ではバリデーションのエラーmsgを出力する際に使用。
+
+（例）
+session_start(); //セッションを開始するときに定義する
+$_SESSION[変数]
 
 
