@@ -276,6 +276,9 @@ echo __FUNCTION__; とする事でファンクション名を試しに出力す�
 ■  $_SERVER['REQUEST_METHOD']
 ページがリクエストされた時のリクエストメソッド名を返す。
 （例）
+// POSTで受け取った上で
+echo $_SERVER['REQUEST_METHOD']; //結果：post
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 ページが遷移されてきた時に、POSTの状態（何かフォームで送信された時にif内の処理が実行される。
 }
@@ -309,7 +312,7 @@ PHPで定義済み変数の事。どの場所でも使用する事ができる�
 下記の9種類が存在する。
 $GLOBALS、$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST、$_ENV
 
-■  $_SERVER
+■  $_SESSION
 セッションとは、コンピュータのサーバー側に一時的にデータを保存する仕組みのこと。
 cookieと似ているがcookieはブラウザ側、セッションはサーバー側にデータを保存する場所が違う。
 実践ではバリデーションのエラーmsgを出力する際に使用。
