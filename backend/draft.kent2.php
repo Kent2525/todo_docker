@@ -277,7 +277,7 @@ echo __FUNCTION__; とする事でファンクション名を試しに出力す�
 ページがリクエストされた時のリクエストメソッド名を返す。
 （例）
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-...
+ページが遷移されてきた時に、POSTの状態（何かフォームで送信された時にif内の処理が実行される。
 }
  
 ■  printfとsprintf
@@ -317,5 +317,32 @@ cookieと似ているがcookieはブラウザ側、セッションはサーバ�
 （例）
 session_start(); //セッションを開始するときに定義する
 $_SESSION[変数]
+
+■ $_GET
+パラメータが付与されたURLの?以降に含まれる情報を取得。
+（例）
+// ※http:: ...detail?todo_id=2にアクセス。
+public function detail() {
+  $todo_id = $_GET['todo_id']; URLのパラメータを参照するので、id=2の情報が取得できる。
+  var_dump($todo_id); // 出力結果：2
+}
+
+■ $_POST
+フォームで送られてきた情報を受け取る時に使用。
+<form action="" method="post">
+  <input type="text" name="first_name">
+  <input type="text" name="last_name">
+</form>
+
+受け取り側
+echo $_POST["first_name"];
+echo $_POST["last_name"];
+
+■ DBからデータを抽出。where文
+select * from テーブル名 where 条件式
+（例）
+select * from todos where id=1 //id=1のデータが抽出
+$stmh = $pdo->query(sprintf('select * from todos where id = %s;', $todo_id));
+
 
 
