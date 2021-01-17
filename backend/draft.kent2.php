@@ -347,5 +347,15 @@ select * from テーブル名 where 条件式
 select * from todos where id=1 //id=1のデータが抽出
 $stmh = $pdo->query(sprintf('select * from todos where id = %s;', $todo_id));
 
+■ 検索機能 whereメソッド
+DBから指定したデータを抽出して、変数に代入する方法。
+（例）
+【view側】
+<input type="text" class="form-control" name="search_title">
+【Controller側】
+$posts = News::where('title', $search_title)->get();
+Newsテーブル内のtitleカラムを検索して, $search_title に打ち込まれた文字列に一致したレコードを取得する。
+
+
 
 
