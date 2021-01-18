@@ -356,6 +356,21 @@ DBから指定したデータを抽出して、変数に代入する方法。
 $posts = News::where('title', $search_title)->get();
 Newsテーブル内のtitleカラムを検索して, $search_title に打ち込まれた文字列に一致したレコードを取得する。
 
+■ アクセス権限（パーミッション）について
+https://hacknote.jp/archives/51298/
+https://qiita.com/shisama/items/5f4c4fa768642aad9e06
+
+$ ls-l でアクセス許可を確認できる。
+$ ls -laで隠しファイルも含めて確認ができる。
+
+chmod 600 【ファイル：-rw———】【ディレクトリ：drw———】：所有者のみ読み書き可能。変更権限。セキュリティは高い。
+
+chmod 700【ファイル：-rwx------】【ディレクトリ：drwx------】：所有者のみ読み書き可能。フルコントロール
+
+.sshのディレクトリには、chmod 700を設定。
+sshの鍵自体には、chmod 600を設定。
+
+
 
 
 
