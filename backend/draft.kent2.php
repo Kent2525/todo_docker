@@ -372,6 +372,17 @@ sshの鍵自体には、chmod 600を設定。
 
 ■ htmlspecialchars関数 h()
 エスケープ処理。エスケープ処理はXSS攻撃などの悪意のあるユーザーが不正な文字を打ち込んだ時に無効にする処理。cakePHPならh()で省略する事ができる。
+Laravelの場合、{{}}を使う事でエスケープ処理を行う関数を呼び出す。{{}}を使う事で中にPHP文を入れる事が可能になる。
 
+■ Validatorについて
+LaravelのリクエストのValidateメソッドを使いたくない場合は、Validatorファザードを使用してデータインスタンスを作成する。
+（例）
+$validator = Validator::make($request->all(), [
+  'order_id' => 'required'
+]);
 
+$validator = Validator::make($request->all(), [
+  'title' => 'required|unique:posts|max:255',
+  'body' => 'required',
+]);
 
