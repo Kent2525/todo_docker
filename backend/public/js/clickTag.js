@@ -5,10 +5,10 @@ function clickTag1() {
 
 // スパンタグをformAreaに表示する
 function clickSpan1() {
-  var span = document.createElement("span");
-  span.innerText = "#家族と会う"
-  var formArea = document.getElementById("formArea");
-  formArea.appendChild(span);
+  var span = document.createElement("span"); //タグを生成する。
+  span.innerText = "#家族と会う" //テキストを入れる。
+  var formArea = document.getElementById("formArea");// top.blade.php内の id=formAreaのエリアを指定。
+  formArea.appendChild(span);// formAreaの子要素にspanの内容を配置。
   span.removeEventListener('click');
   // formArea.disabled = true;
 }

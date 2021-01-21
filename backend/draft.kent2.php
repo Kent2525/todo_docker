@@ -386,3 +386,16 @@ $validator = Validator::make($request->all(), [
   'body' => 'required',
 ]);
 
+■ constとdefineの違いについて
+両方とも定数を定義するもの。
+https://qiita.com/schrosis/items/485b984e05b2eb4521b4
+constはifやforやfunction内で使う事ができない。
+defineはクラス定数を定義するときには使えない。
+if(true) {
+  define('example', 0);
+  define('example1', '例');
+}
+
+
+
+
