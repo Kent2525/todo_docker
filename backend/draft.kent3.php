@@ -20,3 +20,9 @@ backlogからgit cloneを行う。https通信で行う。
 ■ EC CUBE
 トークン先変更部分は見つける事はできたが、どういう仕組みで動いているのかわからない。
 特にcontrollerの部分がどこでクラスが処理されているのかわからない。
+
+1月22日
+■ FTP
+FTPソフトFileZillaの設定。
+FTPの仕組みや反映方法を学習。
+leafletのJavascpirtの部分を追加。
