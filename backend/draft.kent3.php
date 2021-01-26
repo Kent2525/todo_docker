@@ -26,3 +26,8 @@ backlogからgit cloneを行う。https通信で行う。
 FTPソフトFileZillaの設定。
 FTPの仕組みや反映方法を学習。
 leafletのJavascpirtの部分を追加。
+
+1月26日
+■ 正規表現
+正規表現を利用することで、文字列の検索や置換を行うことができる。
+正規表現のマッチを確認できるブラウザ。http://okumocchi.jp/php/re.php
