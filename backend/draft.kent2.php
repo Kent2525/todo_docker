@@ -316,6 +316,7 @@ $GLOBALS、$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUES
 セッションとは、コンピュータのサーバー側に一時的にデータを保存する仕組みのこと。
 cookieと似ているがcookieはブラウザ側、セッションはサーバー側にデータを保存する場所が違う。
 実践ではバリデーションのエラーmsgを出力する際に使用。
+使いどころはユーザーが一度ページを離れて、戻ってきた時にSESSIONがあればデータを保持しているので再ログインする必要がなくなる。
 
 （例）
 session_start(); //セッションを開始するときに定義する
@@ -396,6 +397,32 @@ if(true) {
   define('example1', '例');
 }
 
+■ 正規表現
+正規表現を利用することで、文字列の検索や置換を行うことができる。
+正規表現のマッチを確認できるブラウザ。http://okumocchi.jp/php/re.php
+
+■ ベーシック認証
+アクセス制限をかける方法。そのサイトに訪問した時に認証ダイアログが立ち上がってIDとPassを求められる。
+https://www.itra.co.jp/webmedia/basic_authentication.html
+.htaccessと.htpasswdのファイルをアクセス制限したいディレクトリに作成する。
+【.htaccess】
+AuthUserFile "/フルパス/.htpasswd"
+AuthName "Enter password"
+AuthType BASIC
+require valid-user
+
+フルパスはpass.php(名称は何でもよい）の中で
+<?php echo __FILE__; ?>
+のみを記入して、調べたいディレクトリに配置するとブラウザにフルパスが表示される。
+
+【.htpasswd】
+https://blanche-toile.com/web/htaccess-htpasswd-basic
+パスワードを生成して、.htpasswd内の記載する。
+
+※ローカルの環境では設定する事ができなかった。
+
+■ php echoの短縮記法
+<?php echo test ?> ▶︎ <?= test ?>
 
 
 
