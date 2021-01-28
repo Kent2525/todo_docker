@@ -424,5 +424,25 @@ https://blanche-toile.com/web/htaccess-htpasswd-basic
 ■ php echoの短縮記法
 <?php echo test ?> ▶︎ <?= test ?>
 
+■ defineについて
+定数設定。
+  define('定数名', 値);
+  define('COOKIE_EXPIRE', 365);
+  defineはプログラムのどこからでも呼ぶ事ができる。
+  
+  ■クッキー設定
+define('COOKIE_EXPIRE', 365);
+  
+function __construct($day = COOKIE_EXPIRE) { //defineの365が入る
+  // 有効期限
+  $this->expire = time() + ($day * 24 * 3600); //この設定だと1年間
+}
+
+time() + 24 * 3600; // 1日後
+time() + 7 * 24 * 3600; // 1週間後
+
+
+
+
 
 
