@@ -165,6 +165,7 @@ class TodoController extends Controller
 
 
 ■ staticついて
+https://sys-guard.com/post-13739/
 staticは、簡単に言うと、クラスのインスタンスを生成することなしに、つまり、newせずに利用できるプロパティやメソッドのこと。
 個別に値をずっと持たせておく必要のないとき(newしなくてよいとき)
 クラスプロパティを使用する際に使う。クラスプロパティとはクラス内のプロパティの事。
@@ -429,6 +430,7 @@ https://blanche-toile.com/web/htaccess-htpasswd-basic
   define('定数名', 値);
   define('COOKIE_EXPIRE', 365);
   defineはプログラムのどこからでも呼ぶ事ができる。
+  定数名は大文字で定義する
   
   ■クッキー設定
 define('COOKIE_EXPIRE', 365);
@@ -441,7 +443,11 @@ function __construct($day = COOKIE_EXPIRE) { //defineの365が入る
 time() + 24 * 3600; // 1日後
 time() + 7 * 24 * 3600; // 1週間後
 
-
+■ 三項演算子（条件演算子）
+条件式 ? 真の式 : 偽の式
+【例】
+$sample = サンプル入ってます
+$sample = $sample ! == '' ? $sample : 'エラー'; // $sampleに値があればそのまま値を返す。空なら'エラー'を返す。
 
 
 
