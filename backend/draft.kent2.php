@@ -449,6 +449,15 @@ time() + 7 * 24 * 3600; // 1週間後
 $sample = サンプル入ってます
 $sample = $sample ! == '' ? $sample : 'エラー'; // $sampleに値があればそのまま値を返す。空なら'エラー'を返す。
 
+■ 配列の作り方
+$array_sample = array(); //配列として定義する
+【パターン1】
+$array_sample = array('test', 'テスト');
+// 結果：array(2) { [0]=> string(4) "test" [1]=> string(9) "テスト" }
+【パターン2】
+$array_sample[0] = 'test';
+$array_sample[3] = 'テスト';
+// array(2) { [0]=> string(4) "test" [3]=> string(9) "テスト" }
 
 
 
