@@ -459,5 +459,8 @@ $array_sample[0] = 'test';
 $array_sample[3] = 'テスト';
 // array(2) { [0]=> string(4) "test" [3]=> string(9) "テスト" }
 
+■issetの合体演算子
+$colors = filter_input(INPUT_GET, 'colors') ?? '空です';
+issetでcolorsを中身を調べて代入する処理の省略した書き方。 
 
 
