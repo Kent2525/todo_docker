@@ -51,6 +51,13 @@ leafletのJavascpirtの部分を追加。
 ■サーバーにアクセスして、アドレスを追加する
 ロリポップにメルアド追加の業務。非常に簡単な業務だったが、初めて仕事をこなす事ができた。
 
+2月1日（月）
+■ $this
+https://newmonz.jp/lesson/php-basic/chapter-10
+$thisの理解が深まった。dotinstallのfunctionに詳細記載。
+
+■ ワイルドカード（cakePHP）
+Routeのこれ→* 引数を全て受け入れる事ができる。
 
 
 
