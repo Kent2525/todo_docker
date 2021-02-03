@@ -443,6 +443,8 @@ function __construct($day = COOKIE_EXPIRE) { //defineの365が入る
 time() + 24 * 3600; // 1日後
 time() + 7 * 24 * 3600; // 1週間後
 
+※cookieはディベロッパーツールでapplicationから確認・削除を行う事ができる。
+
 ■ 三項演算子（条件演算子）
 条件式 ? 真の式 : 偽の式
 【例】
