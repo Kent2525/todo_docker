@@ -465,6 +465,29 @@ $array_sample[3] = 'テスト';
 $colors = filter_input(INPUT_GET, 'colors') ?? '空です';
 issetでcolorsを中身を調べて代入する処理の省略した書き方。
 
+■ 令和の日付の出し方
+<?php
+		//$update_dateが当月の場合、$update_dateの日付けを表示($display_dateに表示される)
+		//それ以外は、当月の１日を表示
+		//例 $update_date = '2020-02-21';
+		$update_date = '2021-02-05';
+    $update_date = strtotime($update_date);
+		date_default_timezone_set('Asia/Tokyo');
+		
+		if(strtotime(date('Y-m')) > strtotime(date('Y-m', $update_date))){
+      $year = date('Y');
+			$month_day = date('m月01日');
+		}else{
+      $year = date('Y', $update_date);
+      var_dump($year);
+      exit;
+			$month_day = date('m月d日', $update_date);
+		}
 
+		// 元号が変わった場合は以下を書き換える
+		$display_date = '令和'.($year - 2018).'年'.$month_day;
+?>
+
+		<h3>現在の入居状況［<?php echo $display_date ?>更新］※状況は日々変動いたします。詳しくはお問い合わせください。</h3>
 
 
