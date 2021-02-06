@@ -467,6 +467,16 @@ issetでcolorsを中身を調べて代入する処理の省略した書き方。
 
 ■ 令和の日付の出し方
 <?php
+$year = date('Y');
+$month_day = date('m月d日');
+$display_date = '令和'.($year - 2018).'年'.$month_day;
+?>
+
+<p><php echo $display_date ?></p>
+
+少し複雑なロジック
+
+<?php
 		//$update_dateが当月の場合、$update_dateの日付けを表示($display_dateに表示される)
 		//それ以外は、当月の１日を表示
 		//例 $update_date = '2020-02-21';
@@ -479,8 +489,6 @@ issetでcolorsを中身を調べて代入する処理の省略した書き方。
 			$month_day = date('m月01日');
 		}else{
       $year = date('Y', $update_date);
-      var_dump($year);
-      exit;
 			$month_day = date('m月d日', $update_date);
 		}
 
@@ -489,5 +497,12 @@ issetでcolorsを中身を調べて代入する処理の省略した書き方。
 ?>
 
 		<h3>現在の入居状況［<?php echo $display_date ?>更新］※状況は日々変動いたします。詳しくはお問い合わせください。</h3>
+
+■ mb_convert_encoding() 関数
+    mb_convert_encoding(対象文字列, 変換後の文字列, 元の文字コード);
+  【例】
+    $file="csv/190614_state.csv";
+    $contents=mb_convert_encoding(file_get_contents($file),'UTF-8','sjis-win');
+    // $contentsの中にUTF-8に変換されたファイルの内容が代入される
 
 
