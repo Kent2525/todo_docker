@@ -505,4 +505,17 @@ $display_date = '令和'.($year - 2018).'年'.$month_day;
     $contents=mb_convert_encoding(file_get_contents($file),'UTF-8','sjis-win');
     // $contentsの中にUTF-8に変換されたファイルの内容が代入される
 
+■ Sessionとcookieについて
+Sessionはサーバー側に情報を保存するので安全性が高い。
+Cookieはブラウザ側で変える事ができるので簡単な設定項目に使われる事が多い。
+
+■ GETとPOSTの違いについて
+GETは主に情報の取得で使用する。
+URLにデータが自動で出力されて、安全性が低い。
+サイズ文字制限がある。
+POSTは情報の追加・編集・削除
+安全性がやや高く、サイズ文字制限などはない。
+詳細はドットインストールの「詳解PHPウェブ開発を参照にする。
+
+
 
