@@ -70,6 +70,12 @@ dev環境から本番環境に反映させる作業。
 ■ サーバーとgitとローカル
 3者を行き来しての作業。ディレクトリも複雑で理解に時間が掛かった。
 
+■ var_dumpで文字化けした場合
+echo '<pre>';
+header('Content-Type: text/plain; charset=utf-8');
+var_dump();
+echo '</pre>';
+exit;
 
 
 
